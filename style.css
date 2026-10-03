@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-color: #1C1C1C;
+}
+.container1{
+    background-color: #F8F5F2;
+}
+
+/*navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 10;
+    
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
+.logo img{
+    height: 72px;
+}
+.logo .company-name{
+    display:flex;
+    flex-direction: column;
+    font-weight:bolder;
+    line-height: 1em;
+    color:white;
+}
+.logo .company-name span{
+    color:#8ee5ef;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+    font-weight:600;
+}
+.menu li{
+    color:white;
+    padding: 2px;
+    border-bottom: solid 2px transparent;
+    border-radius: 3px;
+    transition: all;
+    animation-duration: 200ms;
+    font-size: 22px;
+    
+}
+.menu li:hover{
+    color:#f5f5f5;
+    border-color:#f5f5f5;
+    cursor: pointer;
+}
+/*button*/
+.btn1{
+    background:#f5f5f5;
+    color:#1C1C1C;
+    border-radius: 5px;
+    border:none;
+    padding: 5px ;
+    padding-bottom: 9px; 
+    font-size: 20px; 
+     
+}
+.btn1:hover{
+    background: #C9A961;
+    cursor: pointer;
+}
+.hamburger {
+    background:black;
+    color:white;
+    border-radius:3px;
+    border:none;
+    padding: 8px ;
+    padding-bottom: 4px; 
+    z-index: 1002;  
+}
+.hamburger img{
+    height: 20px;
+}
+.hamburger:hover{
+   background:#000000da;
+   cursor: pointer;
+   
+}
+.hamburger{
+    display: none;
+}
+/*responsive*/
+@media screen and (max-width: 646px) {
+    .menu{
+        display: none;
+    }
+    .active{
+        display:flex;
+        flex-direction: column;
+        background-color:#f6f3f3;
+        width:120px;
+        position:absolute;
+        top:70px;
+        right:0;
+        gap: 10px;
+        padding: 10px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .navbar ul
+    { 
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: transparent; 
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        gap: 15px;
+    }
+}
